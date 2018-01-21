@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Thibault
+ * @author Mathieu
  */
 public class BookLister extends Application {
     
@@ -28,7 +28,7 @@ public class BookLister extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         launch(args);
     }
-    
 }
