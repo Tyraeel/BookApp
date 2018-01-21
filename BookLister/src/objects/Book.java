@@ -1,17 +1,16 @@
 package objects;
 
 public class Book {
-    private static int CURRENT_ID=1;
-    
+     
     private int idBook;
     private String titleBook;
     private String authorBook;
     private String descriptionBook;
     private String readingDateBook;
     private boolean readStateBook;
-
-    public Book(String nameBook, String authorBook, String descriptionBook, String readingDateBook, boolean readStateBook) {
-        this.idBook = Book.CURRENT_ID++;
+    
+    public Book(int id, String nameBook, String authorBook, String descriptionBook, String readingDateBook, boolean readStateBook) {
+        this.idBook = id;
         this.titleBook = nameBook;
         this.authorBook = authorBook;
         this.descriptionBook = descriptionBook;
@@ -20,7 +19,12 @@ public class Book {
     }
     
     /*GETTERS AND SETTERS*/ 
-
+    
+    public int getId(){
+        
+        return this.idBook;
+    }
+    
     public String getTitle() {
         return this.titleBook;
     }
