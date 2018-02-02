@@ -12,31 +12,28 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="681.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="booklister.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="780.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="booklister.FXMLDocumentController">
    <children>
-      <ComboBox fx:id="listCategory" layoutX="6.0" layoutY="70.0" onAction="#handleComboBox" prefHeight="25.0" prefWidth="217.0" promptText="Sélectionnez une catégorie" AnchorPane.bottomAnchor="585.0" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="70.0" />
-      <TableView fx:id="bookList" layoutX="10.0" layoutY="121.0" prefHeight="510.0" prefWidth="987.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="121.0">
+      <ComboBox fx:id="listCategory" layoutX="10.0" layoutY="70.0" onAction="#handleComboBox" prefHeight="25.0" prefWidth="217.0" promptText="Sélectionnez une catégorie" AnchorPane.bottomAnchor="685.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="70.0" />
+      <TableView fx:id="bookList" layoutX="10.0" layoutY="119.0" prefHeight="607.0" prefWidth="1181.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="119.0">
         <columns>
-            <TableColumn fx:id="columnId" prefWidth="156.0" text="id" />
-          <TableColumn fx:id="columnTitle" prefWidth="156.0" text="Titre" />
-          <TableColumn fx:id="columnAuthor" prefWidth="160.0" text="Auteur" />
-            <TableColumn fx:id="columnDescription" prefWidth="274.0" text="Description" />
-            <TableColumn fx:id="columnReadingDate" prefWidth="116.0" text="Date de lecture" />
-            <TableColumn fx:id="columnRead" prefWidth="135.0" text="Lu ?" />
-            <TableColumn fx:id="Supp" prefWidth="93.0" text="Supp" />
+            <TableColumn fx:id="columnId" prefWidth="57.0" text="id" />
+          <TableColumn fx:id="columnTitle" prefWidth="255.0" text="Titre" />
+          <TableColumn fx:id="columnAuthor" prefWidth="257.0" text="Auteur" />
+            <TableColumn fx:id="columnDescription" prefWidth="389.0" text="Description" />
+            <TableColumn fx:id="columnReadingDate" prefWidth="133.0" text="Date de lecture" />
+            <TableColumn fx:id="columnRead" prefWidth="88.0" text="Lu ?" />
         </columns>
       </TableView>
-      <Button fx:id="buttonAdd" layoutX="14.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleButtonAdd" prefHeight="25.0" prefWidth="67.0" styleClass="primary" text="Ajouter" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="924.0" />
-      <Button fx:id="refreshButton" layoutX="197.0" layoutY="646.0" mnemonicParsing="false" onAction="#handleRefreshButton" prefHeight="25.0" prefWidth="84.0" styleClass="info" text="Actualiser" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="735.0" />
-      <Label layoutX="429.0" layoutY="14.0" prefHeight="32.0" prefWidth="103.0" style="-fx-border-color: black;" text="BookLister" textAlignment="CENTER" AnchorPane.leftAnchor="429.0" AnchorPane.rightAnchor="428.0">
+      <Button fx:id="buttonAdd" layoutX="14.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleButtonAdd" prefHeight="25.0" prefWidth="110.0" styleClass="primary" text="Ajouter" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="1100.0" />
+      <Button fx:id="refreshButton" layoutX="243.0" layoutY="745.0" mnemonicParsing="false" onAction="#handleRefreshButton" prefHeight="25.0" prefWidth="84.0" styleClass="info" text="Actualiser" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="860.0" />
+      <Button fx:id="deleteButton" layoutX="146.0" layoutY="745.0" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="25.0" prefWidth="96.0" styleClass="danger" text="Supprimer" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="980.0" />
+      <Label fx:id="booksNbSentence" layoutX="384.0" layoutY="749.0" prefHeight="17.0" prefWidth="359.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="384.0" />
+      <Region prefHeight="64.0" prefWidth="1200.0" style="-fx-background-color: #373737;" />
+      <Label layoutX="532.0" layoutY="-6.0" prefHeight="76.0" prefWidth="136.0" text="  BookLister" textFill="WHITE" AnchorPane.leftAnchor="532.0" AnchorPane.rightAnchor="532.0">
          <font>
-            <Font name="Marlett" size="13.0" />
+            <Font name="Strawberry Blossom " size="48.0" />
          </font>
-         <padding>
-            <Insets left="55.0" />
-         </padding>
       </Label>
-      <Button fx:id="deleteButton" layoutX="95.0" layoutY="646.0" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="25.0" prefWidth="92.0" styleClass="danger" text="Supprimer" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="829.0" />
-      <Label fx:id="booksNbSentence" layoutX="313.0" layoutY="650.0" prefHeight="17.0" prefWidth="359.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="313.0" />
    </children>
 </AnchorPane>
