@@ -60,8 +60,6 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button refreshButton;
     @FXML
-    private TableColumn<Book, Boolean> Supp;
-    @FXML
     private Button deleteButton;
     @FXML
     private Label booksNbSentence;
@@ -74,9 +72,9 @@ public class FXMLDocumentController implements Initializable {
         try {
             Class.forName("org.postgresql.Driver");
             
-            String sUrl = "jdbc:postgresql://localhost:5432/Book app";
-            String user = "postgres";
-            String passwd = "2809015885L";
+            String sUrl = "jdbc:postgresql://postgresql-piterboth.alwaysdata.net:5432/piterboth_bookapp";
+            String user = "piterboth";
+            String passwd = "2809015885L-";
 
        
             conn = DriverManager.getConnection(sUrl, user, passwd);
@@ -131,8 +129,7 @@ public class FXMLDocumentController implements Initializable {
                 return new ReadOnlyObjectWrapper(b.getValue().getReadState());
             }
         });
-        
-        Supp.setCellFactory(CheckBoxTableCell.forTableColumn(Supp));
+       
         
         try {
             bookDisplayed = getAllBooks();

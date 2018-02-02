@@ -21,6 +21,7 @@ public class BookLister extends Application {
         scene.getStylesheets().add("css/bootstrap.css");
         stage.setResizable(false);
         stage.setScene(scene);
+        stage.setTitle("BookLister 1.0");
         stage.show();
     }
 
